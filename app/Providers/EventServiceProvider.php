@@ -19,6 +19,13 @@ class EventServiceProvider extends ServiceProvider
         'Illuminate\Notifications\Events\NotificationSent' => [
             'App\Listeners\LogNotification',
         ],
+        'App\Events\OrderShipped' => [
+            'App\Listeners\SendShipmentNotification',
+        ],
+//        'App\Events\UserEvent' => [
+//            'App\Listeners\UserEventSubscriber',
+//        ],
+
     ];
 
     /**
@@ -32,4 +39,8 @@ class EventServiceProvider extends ServiceProvider
 
         //
     }
+    //register a subscriber
+    protected $subscribe=[
+        'App\Listeners\UserEventSubscriber',
+    ];
 }
