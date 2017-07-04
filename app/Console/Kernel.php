@@ -34,7 +34,6 @@ class Kernel extends ConsoleKernel
         })->after(function (){
             \App\Logic\JobLogic::aftertestjob();
         });
-
     }
 
     /**

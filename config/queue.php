@@ -41,6 +41,13 @@ return [
             'retry_after' => 90,
         ],
 
+        'databasejob' => [
+            'driver' => 'database',
+            'table' => 'jobs',
+            'queue' => 'default',
+            'retry_after' => 90,
+        ],
+
         'beanstalkd' => [
             'driver' => 'beanstalkd',
             'host' => 'localhost',
@@ -59,7 +66,7 @@ return [
 
         'redis' => [
             'driver' => 'redis',
-            'connection' => 'default',
+            'connection' => 'jobredis',
             'queue' => 'default',
             'retry_after' => 90,
         ],

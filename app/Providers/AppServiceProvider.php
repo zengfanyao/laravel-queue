@@ -7,6 +7,10 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\Facades\Queue;
 use Illuminate\Queue\Events\JobProcessed;
 use Illuminate\Queue\Events\JobProcessing;
+use Illuminate\Queue\Events\JobFailed;
+use function json_decode;
+use function json_encode;
+
 class AppServiceProvider extends ServiceProvider
 {
     /**
@@ -20,21 +24,22 @@ class AppServiceProvider extends ServiceProvider
         Schema::defaultStringLength(191);
         Queue::before(function (JobProcessing $event) {
             // $event->connectionName
-            \Log::info('process before');
-            \Log::info($event->connectionName);
-            // $event->job->payload()
-        });
+            \Log::info('队列处理开始');
 
+
+        });
+//
         Queue::after(function (JobProcessed $event) {
-            \Log::info('process after');
-            \Log::info($event->connectionName);
+            \Log::info('队列处理结束');
+
+        });
+        Queue::failing(function (JobFailed $event) {
             // $event->connectionName
             // $event->job
-            // $event->job->payload()
+            // $event->exception
+            \Log::info("队列处理异常");
         });
-
     }
-
     /**
      * Register any application services.
      *

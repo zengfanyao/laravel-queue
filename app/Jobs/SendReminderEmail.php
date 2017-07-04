@@ -8,6 +8,8 @@ use Illuminate\Queue\SerializesModels;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
+use Exception;
+use function sleep;
 
 class SendReminderEmail implements ShouldQueue
 {
@@ -19,6 +21,7 @@ class SendReminderEmail implements ShouldQueue
      * @return void
      */
     protected $user;
+    public $timeout = 40;
     public function __construct(User $user)
     {
         //
@@ -34,7 +37,12 @@ class SendReminderEmail implements ShouldQueue
     public function handle()
     {
         //
-        //sleep(2);
+        sleep(10);
        \Log::info($this->user->id.'-----------------'.$this->user->email);
+    }
+
+    public function failed()
+    {
+        \Log::info('---------------------failingjob---------------------');
     }
 }

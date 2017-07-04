@@ -10,10 +10,10 @@ class JobLogic
 {
     public static function beforetestjob()
     {
-        \Log::info('before task');
+        \Log::info('插入任务队列开始');
     }
     public static function aftertestjob()
     {
-        \Log::info('after task');
+        \Log::info('插入任务队列结束');
     }
 }
