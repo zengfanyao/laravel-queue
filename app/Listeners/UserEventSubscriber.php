@@ -25,7 +25,7 @@ class UserEventSubscriber
 
     public function orderShipped($event)
     {
-        \Log::info('orderShipped');
+        \Log::info('subscribe a orderShipped');
     }
     public function subscribe($event)
     {

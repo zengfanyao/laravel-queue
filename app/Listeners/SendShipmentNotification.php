@@ -32,11 +32,6 @@ class SendShipmentNotification implements ShouldQueue
      */
     public function handle(OrderShipped $event)
     {
-
-
-
         \Log::info('enter a litener '.$event->user->id);
-
-
     }
 }
