@@ -3,6 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Events\OrderShipped;
+
+
+use App\Events\UserEvent;
+
 use App\Jobs\SendReminderEmail;
 use App\Notifications\InvoicePaid;
 use function dd;
@@ -25,9 +29,20 @@ class TestController extends Controller
 //           }
            return '222';
     }
+
     public function ship()
     {
-        $user=\App\User::find(1);
+        $user=\App\User::findOrFail(1);
+        event(new OrderShipped($user));
+        return 'done';
+    }
+
+    public function subscribe()
+    {
+        $user=\App\User::findOrFail(2);
+        $userevent=new UserEvent($user);
+        event($userevent);
+
         event(new OrderShipped($user));
     }
 }

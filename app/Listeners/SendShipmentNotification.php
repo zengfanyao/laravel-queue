@@ -13,8 +13,11 @@ class SendShipmentNotification implements ShouldQueue
      *
      * @return void
      */
+
     protected $connection='database';
     protected $queue='listeners';
+
+
 
     public function __construct()
     {
@@ -29,7 +32,11 @@ class SendShipmentNotification implements ShouldQueue
      */
     public function handle(OrderShipped $event)
     {
-        \Log::info('event user coming');
-        \Log::info($event->user);
+
+
+
+        \Log::info('enter a litener '.$event->user->id);
+
+
     }
 }

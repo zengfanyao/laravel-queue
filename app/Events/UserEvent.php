@@ -10,11 +10,9 @@ use Illuminate\Foundation\Events\Dispatchable;
 use Illuminate\Broadcasting\InteractsWithSockets;
 use Illuminate\Contracts\Broadcasting\ShouldBroadcast;
 
-class OrderShipped
+class UserEvent
 {
     use Dispatchable, InteractsWithSockets, SerializesModels;
-
-
     public $user;
     /**
      * Create a new event instance.

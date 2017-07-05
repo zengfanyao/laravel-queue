@@ -18,4 +18,8 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 Route::get('job','TestController@testJob');
+
 Route::get('event','TestController@event');
+
+Route::get('ship','TestController@ship');
+Route::get('subscribe','TestController@subscribe');

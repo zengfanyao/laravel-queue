@@ -23,6 +23,12 @@ class EventServiceProvider extends ServiceProvider
         'App\Events\OrderShipped' => [
             'App\Listeners\SendShipmentNotification',
         ],
+
+//        'App\Events\UserEvent' => [
+//            'App\Listeners\UserEventSubscriber',
+//        ],
+
+
     ];
 
     /**
@@ -36,4 +42,8 @@ class EventServiceProvider extends ServiceProvider
 
         //
     }
+    //register a subscriber
+    protected $subscribe=[
+        'App\Listeners\UserEventSubscriber',
+    ];
 }
