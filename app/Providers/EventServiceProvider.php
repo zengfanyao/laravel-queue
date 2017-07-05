@@ -16,8 +16,12 @@ class EventServiceProvider extends ServiceProvider
         'App\Events\Event' => [
             'App\Listeners\EventListener',
         ],
+        //注册事件和监听器
         'Illuminate\Notifications\Events\NotificationSent' => [
             'App\Listeners\LogNotification',
+        ],
+        'App\Events\OrderShipped' => [
+            'App\Listeners\SendShipmentNotification',
         ],
     ];
 
