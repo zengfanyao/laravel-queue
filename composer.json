@@ -6,8 +6,10 @@
     "type": "project",
     "require": {
         "php": ">=5.6.4",
+        "francodacosta/phmagick": "^5.0",
         "laravel/framework": "5.4.*",
         "laravel/tinker": "~1.0",
+        "orbitale/imagemagick-php": "^1.6",
         "predis/predis": "^1.1",
         "pusher/pusher-php-server": "^2.6"
     },

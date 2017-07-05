@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "5d803b979258baf8078c74cc420066b0",
+    "content-hash": "b8e9930527e3768b412884f055acd6e9",
     "packages": [
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -147,6 +147,53 @@
                 "parser"
             ],
             "time": "2017-03-29T16:04:15+00:00"
+        },
+        {
+            "name": "francodacosta/phmagick",
+            "version": "v5.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/francodacosta/phmagick.git",
+                "reference": "8871ec58ca5d12cc458d08ce1b9801d66ef35f16"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://files.phpcomposer.com/files/francodacosta/phmagick/8871ec58ca5d12cc458d08ce1b9801d66ef35f16.zip",
+                "reference": "8871ec58ca5d12cc458d08ce1b9801d66ef35f16",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "phMagick": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nuno Costa",
+                    "email": "nuno@francodacosta.com",
+                    "homepage": "http://www.francodacosta.com"
+                }
+            ],
+            "description": "image manipulation with php and ImageMagick",
+            "homepage": "https://github.com/francodacosta/phmagick",
+            "keywords": [
+                "ImageMagick",
+                "gd",
+                "image manipulation",
+                "image resize",
+                "imagick",
+                "resize",
+                "thumbnail"
+            ],
+            "time": "2015-05-26T09:42:38+00:00"
         },
         {
             "name": "jakub-onderka/php-console-color",
@@ -735,6 +782,57 @@
                 "php"
             ],
             "time": "2017-06-28T20:53:48+00:00"
+        },
+        {
+            "name": "orbitale/imagemagick-php",
+            "version": "v1.6.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Orbitale/ImageMagickPHP.git",
+                "reference": "46a02e3dcfbc824c40e032fd6fb84f8ac97323ff"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://files.phpcomposer.com/files/Orbitale/ImageMagickPHP/46a02e3dcfbc824c40e032fd6fb84f8ac97323ff.zip",
+                "reference": "46a02e3dcfbc824c40e032fd6fb84f8ac97323ff",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4",
+                "symfony/filesystem": "~2.3|~3.0",
+                "symfony/process": "~2.3|~3.0",
+                "symfony/yaml": "~2.3|~3.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^4.8|^5.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Orbitale\\Component\\ImageMagick\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Alex Rock Ancelet",
+                    "email": "alex@orbitale.io",
+                    "homepage": "http://www.orbitale.io/"
+                }
+            ],
+            "description": "A system that allows creating commands to send to the exec() function to use ImageMagick's powerful features.",
+            "homepage": "https://github.com/Orbitale/ImageMagickPHP",
+            "keywords": [
+                "ImageMagick",
+                "converter",
+                "gd",
+                "image",
+                "imagick"
+            ],
+            "time": "2017-02-10T13:33:40+00:00"
         },
         {
             "name": "paragonie/random_compat",
@@ -1376,6 +1474,55 @@
             "time": "2017-06-04T18:15:29+00:00"
         },
         {
+            "name": "symfony/filesystem",
+            "version": "v3.3.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/filesystem.git",
+                "reference": "311fa718389efbd8b627c272b9324a62437018cc"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://files.phpcomposer.com/files/symfony/filesystem/311fa718389efbd8b627c272b9324a62437018cc.zip",
+                "reference": "311fa718389efbd8b627c272b9324a62437018cc",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.5.9"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.3-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Component\\Filesystem\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony Filesystem Component",
+            "homepage": "https://symfony.com",
+            "time": "2017-06-24T09:29:48+00:00"
+        },
+        {
             "name": "symfony/finder",
             "version": "v3.3.2",
             "source": {
@@ -1881,6 +2028,61 @@
                 "dump"
             ],
             "time": "2017-06-02T09:10:29+00:00"
+        },
+        {
+            "name": "symfony/yaml",
+            "version": "v3.3.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/yaml.git",
+                "reference": "9752a30000a8ca9f4b34b5227d15d0101b96b063"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://files.phpcomposer.com/files/symfony/yaml/9752a30000a8ca9f4b34b5227d15d0101b96b063.zip",
+                "reference": "9752a30000a8ca9f4b34b5227d15d0101b96b063",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.5.9"
+            },
+            "require-dev": {
+                "symfony/console": "~2.8|~3.0"
+            },
+            "suggest": {
+                "symfony/console": "For validating YAML files using the lint command"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.3-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Component\\Yaml\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony Yaml Component",
+            "homepage": "https://symfony.com",
+            "time": "2017-06-02T22:05:06+00:00"
         },
         {
             "name": "tijsverkoyen/css-to-inline-styles",
@@ -3346,61 +3548,6 @@
             "description": "Library that helps with managing the version number of Git-hosted PHP projects",
             "homepage": "https://github.com/sebastianbergmann/version",
             "time": "2016-10-03T07:35:21+00:00"
-        },
-        {
-            "name": "symfony/yaml",
-            "version": "v3.3.2",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/yaml.git",
-                "reference": "9752a30000a8ca9f4b34b5227d15d0101b96b063"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://files.phpcomposer.com/files/symfony/yaml/9752a30000a8ca9f4b34b5227d15d0101b96b063.zip",
-                "reference": "9752a30000a8ca9f4b34b5227d15d0101b96b063",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.5.9"
-            },
-            "require-dev": {
-                "symfony/console": "~2.8|~3.0"
-            },
-            "suggest": {
-                "symfony/console": "For validating YAML files using the lint command"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "3.3-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Symfony\\Component\\Yaml\\": ""
-                },
-                "exclude-from-classmap": [
-                    "/Tests/"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Fabien Potencier",
-                    "email": "fabien@symfony.com"
-                },
-                {
-                    "name": "Symfony Community",
-                    "homepage": "https://symfony.com/contributors"
-                }
-            ],
-            "description": "Symfony Yaml Component",
-            "homepage": "https://symfony.com",
-            "time": "2017-06-02T22:05:06+00:00"
         },
         {
             "name": "webmozart/assert",

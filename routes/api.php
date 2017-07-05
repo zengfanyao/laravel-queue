@@ -23,3 +23,4 @@ Route::get('event','TestController@event');
 
 Route::get('ship','TestController@ship');
 Route::get('subscribe','TestController@subscribe');
+Route::get('ppt','TestController@convert');

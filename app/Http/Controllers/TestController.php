@@ -45,4 +45,9 @@ class TestController extends Controller
 
         event(new OrderShipped($user));
     }
+
+    public function convert()
+    {
+        \App\Logic\PdftopictureLogic::pdftopicture();
+    }
 }
